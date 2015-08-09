@@ -6,12 +6,31 @@
 //  Copyright © 2015 Mateusz Dzwonek. All rights reserved.
 //
 
+import CloudKit
+
 class Message {
     
-    var title: String
+    static let RecordType = "Message"
+    static let TitleKey = "title"
+    
+    private(set) var record: CKRecord
+    
+    init(withRecord record: CKRecord) {
+        self.record = record
+    }
     
     init(withTitle title: String) {
-        self.title = title
+        record = CKRecord(recordType: Message.RecordType)
+        record[Message.TitleKey] = title
     }
-
+    
+    var title: String {
+        get {
+            return record[Message.TitleKey] as! String
+        }
+        set {
+            record[Message.TitleKey] = newValue
+        }
+    }
+    
 }

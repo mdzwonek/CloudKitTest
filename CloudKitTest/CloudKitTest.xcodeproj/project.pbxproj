@@ -11,12 +11,12 @@
 		487ED6991B7744CD004D2B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 487ED6971B7744CD004D2B7C /* Main.storyboard */; };
 		487ED69B1B7744CD004D2B7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487ED69A1B7744CD004D2B7C /* Images.xcassets */; };
 		487ED69E1B7744CD004D2B7C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 487ED69C1B7744CD004D2B7C /* LaunchScreen.xib */; };
-		487ED6AA1B7744CD004D2B7C /* CloudKitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487ED6A91B7744CD004D2B7C /* CloudKitTestTests.swift */; };
 		487ED6B51B77471C004D2B7C /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487ED6B31B77471C004D2B7C /* ComposeViewController.swift */; };
 		487ED6B61B77471C004D2B7C /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487ED6B41B77471C004D2B7C /* DisplayViewController.swift */; };
 		48ED7DC71B7770C100AF915E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ED7DC41B7770C100AF915E /* DataManager.swift */; };
 		48ED7DC81B7770C100AF915E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ED7DC51B7770C100AF915E /* Message.swift */; };
 		48ED7DC91B7770C100AF915E /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ED7DC61B7770C100AF915E /* MessageCell.swift */; };
+		48ED7DCD1B77774A00AF915E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48ED7DCC1B77774A00AF915E /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,14 +26,13 @@
 		487ED6981B7744CD004D2B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		487ED69A1B7744CD004D2B7C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		487ED69D1B7744CD004D2B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		487ED6A31B7744CD004D2B7C /* CloudKitTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudKitTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		487ED6A81B7744CD004D2B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		487ED6A91B7744CD004D2B7C /* CloudKitTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitTestTests.swift; sourceTree = "<group>"; };
 		487ED6B31B77471C004D2B7C /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		487ED6B41B77471C004D2B7C /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		48ED7DC41B7770C100AF915E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		48ED7DC51B7770C100AF915E /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		48ED7DC61B7770C100AF915E /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		48ED7DCB1B77774600AF915E /* CloudKitTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CloudKitTest.entitlements; sourceTree = "<group>"; };
+		48ED7DCC1B77774A00AF915E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48ED7DCD1B77774A00AF915E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				487ED6901B7744CD004D2B7C /* CloudKitTest */,
+				48ED7DCE1B77775A00AF915E /* Frameworks */,
 				487ED68F1B7744CD004D2B7C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,24 +81,8 @@
 		487ED6911B7744CD004D2B7C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				48ED7DCB1B77774600AF915E /* CloudKitTest.entitlements */,
 				487ED6921B7744CD004D2B7C /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		487ED6A61B7744CD004D2B7C /* CloudKitTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				487ED6A91B7744CD004D2B7C /* CloudKitTestTests.swift */,
-				487ED6A71B7744CD004D2B7C /* Supporting Files */,
-			);
-			path = CloudKitTestTests;
-			sourceTree = "<group>";
-		};
-		487ED6A71B7744CD004D2B7C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				487ED6A81B7744CD004D2B7C /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,6 +104,14 @@
 				48ED7DC41B7770C100AF915E /* DataManager.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		48ED7DCE1B77775A00AF915E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48ED7DCC1B77774A00AF915E /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +146,12 @@
 				TargetAttributes = {
 					487ED68D1B7744CD004D2B7C = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = BE6NAXXLXT;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -309,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CloudKitTest/CloudKitTest.entitlements;
 				INFOPLIST_FILE = CloudKitTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mdzwonek.$(PRODUCT_NAME:rfc1034identifier)";
@@ -320,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CloudKitTest/CloudKitTest.entitlements;
 				INFOPLIST_FILE = CloudKitTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mdzwonek.$(PRODUCT_NAME:rfc1034identifier)";
