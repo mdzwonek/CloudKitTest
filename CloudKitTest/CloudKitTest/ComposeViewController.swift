@@ -11,7 +11,15 @@ import CloudKit
 
 class ComposeViewController: UIViewController {
     
+    var message: Message?
     @IBOutlet weak var textView: UITextView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let message = message {
+            textView.text = message.title
+        }
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -23,12 +31,18 @@ class ComposeViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(sender: AnyObject) {
-        let message = Message(withTitle: textView.text)
-        DataManager.sharedInstance.addMessage(message) { error -> Void in
+        let completion: NSError? -> Void = { error -> Void in
             if let error = error {
                 NSLog("Error when saving message: \(error)")
             }
             self.dismiss()
+        }
+        
+        if let message = message {
+            DataManager.sharedInstance.updateMessage(message, withTitle: textView.text, andCompletion: completion)
+        } else {
+            let message = Message(withTitle: textView.text)
+            DataManager.sharedInstance.addMessage(message, withCompletion: completion)
         }
     }
     

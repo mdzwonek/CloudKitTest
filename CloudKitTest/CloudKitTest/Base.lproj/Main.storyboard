@@ -74,6 +74,7 @@
                                         <animations/>
                                         <connections>
                                             <outlet property="contentLabel" destination="2f2-kH-Vw2" id="CMk-zk-BIy"/>
+                                            <segue destination="1lI-zg-A2U" kind="presentation" identifier="EditSegue" id="Zhp-YX-Dor"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -182,4 +183,7 @@
             <point key="canvasLocation" x="1375" y="432"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zhp-YX-Dor"/>
+    </inferredMetricsTieBreakers>
 </document>

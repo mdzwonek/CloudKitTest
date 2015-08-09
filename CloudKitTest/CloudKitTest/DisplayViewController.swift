@@ -11,6 +11,7 @@ import UIKit
 class DisplayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     static let CellIdentifier = "Cell"
+    static let EditSegueIdentifier = "EditSegue"
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,6 +30,16 @@ class DisplayViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.messages = messages!;
                 self.tableView.reloadData()
             }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == DisplayViewController.EditSegueIdentifier {
+            let cell = sender as! MessageCell
+            let index = tableView.indexPathForCell(cell)!
+            let message = messages[index.row]
+            let composeViewController = segue.destinationViewController as! ComposeViewController
+            composeViewController.message = message
         }
     }
     

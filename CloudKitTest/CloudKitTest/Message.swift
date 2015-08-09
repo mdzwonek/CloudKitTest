@@ -8,7 +8,7 @@
 
 class Message {
     
-    let title: String
+    var title: String
     
     init(withTitle title: String) {
         self.title = title

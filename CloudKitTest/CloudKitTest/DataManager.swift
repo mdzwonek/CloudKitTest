@@ -27,4 +27,9 @@ class DataManager {
         completion(nil)
     }
     
+    func updateMessage(message: Message, withTitle title: String, andCompletion completion: NSError? -> Void) -> Void {
+        message.title = title
+        completion(nil)
+    }
+    
 }
