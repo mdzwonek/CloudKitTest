@@ -14,6 +14,9 @@
 		487ED6AA1B7744CD004D2B7C /* CloudKitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487ED6A91B7744CD004D2B7C /* CloudKitTestTests.swift */; };
 		487ED6B51B77471C004D2B7C /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487ED6B31B77471C004D2B7C /* ComposeViewController.swift */; };
 		487ED6B61B77471C004D2B7C /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487ED6B41B77471C004D2B7C /* DisplayViewController.swift */; };
+		48ED7DC71B7770C100AF915E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ED7DC41B7770C100AF915E /* DataManager.swift */; };
+		48ED7DC81B7770C100AF915E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ED7DC51B7770C100AF915E /* Message.swift */; };
+		48ED7DC91B7770C100AF915E /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ED7DC61B7770C100AF915E /* MessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		487ED6A91B7744CD004D2B7C /* CloudKitTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitTestTests.swift; sourceTree = "<group>"; };
 		487ED6B31B77471C004D2B7C /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		487ED6B41B77471C004D2B7C /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		48ED7DC41B7770C100AF915E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		48ED7DC51B7770C100AF915E /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		48ED7DC61B7770C100AF915E /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				487ED6931B7744CD004D2B7C /* AppDelegate.swift */,
+				48ED7DCA1B7770CD00AF915E /* Model */,
 				487ED6B71B774728004D2B7C /* View Controllers */,
 				487ED6971B7744CD004D2B7C /* Main.storyboard */,
 				487ED69A1B7744CD004D2B7C /* Images.xcassets */,
@@ -99,9 +106,19 @@
 			isa = PBXGroup;
 			children = (
 				487ED6B41B77471C004D2B7C /* DisplayViewController.swift */,
+				48ED7DC61B7770C100AF915E /* MessageCell.swift */,
 				487ED6B31B77471C004D2B7C /* ComposeViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		48ED7DCA1B7770CD00AF915E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48ED7DC51B7770C100AF915E /* Message.swift */,
+				48ED7DC41B7770C100AF915E /* DataManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,8 +193,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				487ED6B51B77471C004D2B7C /* ComposeViewController.swift in Sources */,
+				48ED7DC71B7770C100AF915E /* DataManager.swift in Sources */,
+				48ED7DC81B7770C100AF915E /* Message.swift in Sources */,
 				487ED6941B7744CD004D2B7C /* AppDelegate.swift in Sources */,
 				487ED6B61B77471C004D2B7C /* DisplayViewController.swift in Sources */,
+				48ED7DC91B7770C100AF915E /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

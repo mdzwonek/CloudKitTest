@@ -23,7 +23,13 @@ class ComposeViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(sender: AnyObject) {
-        dismiss()
+        let message = Message(withTitle: textView.text)
+        DataManager.sharedInstance.addMessage(message) { error -> Void in
+            if let error = error {
+                NSLog("Error when saving message: \(error)")
+            }
+            self.dismiss()
+        }
     }
     
     func dismiss() {
