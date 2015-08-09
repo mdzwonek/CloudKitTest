@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		487ED6941B7744CD004D2B7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487ED6931B7744CD004D2B7C /* AppDelegate.swift */; };
-		487ED6961B7744CD004D2B7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487ED6951B7744CD004D2B7C /* ViewController.swift */; };
 		487ED6991B7744CD004D2B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 487ED6971B7744CD004D2B7C /* Main.storyboard */; };
 		487ED69B1B7744CD004D2B7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487ED69A1B7744CD004D2B7C /* Images.xcassets */; };
 		487ED69E1B7744CD004D2B7C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 487ED69C1B7744CD004D2B7C /* LaunchScreen.xib */; };
+		487ED6AA1B7744CD004D2B7C /* CloudKitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487ED6A91B7744CD004D2B7C /* CloudKitTestTests.swift */; };
+		487ED6B51B77471C004D2B7C /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487ED6B31B77471C004D2B7C /* ComposeViewController.swift */; };
+		487ED6B61B77471C004D2B7C /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487ED6B41B77471C004D2B7C /* DisplayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		487ED68E1B7744CD004D2B7C /* CloudKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487ED6921B7744CD004D2B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		487ED6931B7744CD004D2B7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		487ED6951B7744CD004D2B7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		487ED6981B7744CD004D2B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		487ED69A1B7744CD004D2B7C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		487ED69D1B7744CD004D2B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		487ED6A31B7744CD004D2B7C /* CloudKitTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudKitTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		487ED6A81B7744CD004D2B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		487ED6A91B7744CD004D2B7C /* CloudKitTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitTestTests.swift; sourceTree = "<group>"; };
+		487ED6B31B77471C004D2B7C /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		487ED6B41B77471C004D2B7C /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				487ED6931B7744CD004D2B7C /* AppDelegate.swift */,
-				487ED6951B7744CD004D2B7C /* ViewController.swift */,
+				487ED6B71B774728004D2B7C /* View Controllers */,
 				487ED6971B7744CD004D2B7C /* Main.storyboard */,
 				487ED69A1B7744CD004D2B7C /* Images.xcassets */,
 				487ED69C1B7744CD004D2B7C /* LaunchScreen.xib */,
@@ -70,6 +76,32 @@
 				487ED6921B7744CD004D2B7C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		487ED6A61B7744CD004D2B7C /* CloudKitTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				487ED6A91B7744CD004D2B7C /* CloudKitTestTests.swift */,
+				487ED6A71B7744CD004D2B7C /* Supporting Files */,
+			);
+			path = CloudKitTestTests;
+			sourceTree = "<group>";
+		};
+		487ED6A71B7744CD004D2B7C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				487ED6A81B7744CD004D2B7C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		487ED6B71B774728004D2B7C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				487ED6B41B77471C004D2B7C /* DisplayViewController.swift */,
+				487ED6B31B77471C004D2B7C /* ComposeViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				487ED6961B7744CD004D2B7C /* ViewController.swift in Sources */,
+				487ED6B51B77471C004D2B7C /* ComposeViewController.swift in Sources */,
 				487ED6941B7744CD004D2B7C /* AppDelegate.swift in Sources */,
+				487ED6B61B77471C004D2B7C /* DisplayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
