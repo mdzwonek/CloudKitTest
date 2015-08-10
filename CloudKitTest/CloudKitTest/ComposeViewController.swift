@@ -31,10 +31,7 @@ class ComposeViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(sender: AnyObject) {
-        let completion: NSError? -> Void = { error -> Void in
-            if let error = error {
-                NSLog("Error when saving message: \(error)")
-            }
+        let completion: NSError? -> Void = { _ in
             self.dismiss()
         }
         

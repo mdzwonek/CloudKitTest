@@ -24,10 +24,8 @@ class DisplayViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @objc private func refreshMessages() {
         DataManager.sharedInstance.getMessagesWithCompletion { (messages, error) -> Void in
-            if let error = error {
-                NSLog("Error when fetching messages. (Error: \(error))")
-            } else {
-                self.messages = messages!;
+            if let messages = messages {
+                self.messages = messages;
                 self.tableView.reloadData()
             }
         }
