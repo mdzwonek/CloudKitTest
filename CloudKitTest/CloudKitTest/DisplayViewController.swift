@@ -14,8 +14,15 @@ class DisplayViewController: UIViewController, UITableViewDataSource, UITableVie
     static let EditSegueIdentifier = "EditSegue"
     
     @IBOutlet weak var tableView: UITableView!
+    private var refreshControl = UIRefreshControl()
     
     private var messages = [Message]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        refreshControl.addTarget(self, action: "refreshMessages", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl)
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -28,6 +35,7 @@ class DisplayViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.messages = messages;
                 self.tableView.reloadData()
             }
+            self.refreshControl.endRefreshing()
         }
     }
     
